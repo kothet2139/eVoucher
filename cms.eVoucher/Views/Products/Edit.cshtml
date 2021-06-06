@@ -1,0 +1,100 @@
+﻿@model cms.eVoucher.Model.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="description" class="control-label"></label>
+                <input asp-for="description" class="form-control" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="created_date" class="control-label"></label>
+                <input asp-for="created_date" class="form-control" />
+                <span asp-validation-for="created_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modified_date" class="control-label"></label>
+                <input asp-for="modified_date" class="form-control" />
+                <span asp-validation-for="modified_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="created_by" class="control-label"></label>
+                <input asp-for="created_by" class="form-control" />
+                <span asp-validation-for="created_by" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modified_by" class="control-label"></label>
+                <input asp-for="modified_by" class="form-control" />
+                <span asp-validation-for="modified_by" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="expiry_date" class="control-label"></label>
+                <input asp-for="expiry_date" class="form-control" />
+                <span asp-validation-for="expiry_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="amount" class="control-label"></label>
+                <input asp-for="amount" class="form-control" />
+                <span asp-validation-for="amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="quantity" class="control-label"></label>
+                <input asp-for="quantity" class="form-control" />
+                <span asp-validation-for="quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="is_active" /> @Html.DisplayNameFor(model => model.is_active)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="is_onlyme_usage" /> @Html.DisplayNameFor(model => model.is_onlyme_usage)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="max_for_me" class="control-label"></label>
+                <input asp-for="max_for_me" class="form-control" />
+                <span asp-validation-for="max_for_me" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="max_to_gift" class="control-label"></label>
+                <input asp-for="max_to_gift" class="form-control" />
+                <span asp-validation-for="max_to_gift" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

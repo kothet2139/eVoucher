@@ -1,0 +1,114 @@
+﻿@model IEnumerable<cms.eVoucher.Model.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modified_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modified_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.expiry_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_onlyme_usage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.max_for_me)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.max_to_gift)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modified_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.created_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modified_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.expiry_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_onlyme_usage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_for_me)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max_to_gift)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,103 @@
+﻿@model cms.eVoucher.Model.Product
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.created_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.created_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.modified_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.modified_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.created_by)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.created_by)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.modified_by)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.modified_by)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.expiry_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.expiry_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.is_active)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.is_active)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.is_onlyme_usage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.is_onlyme_usage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.max_for_me)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.max_for_me)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.max_to_gift)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.max_to_gift)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.image)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

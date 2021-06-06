@@ -1,0 +1,6 @@
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.csprojAssemblyReference.cache
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.AssemblyInfoInputs.cache
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.AssemblyInfo.cs
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.csproj.CoreCompileInputs.cache
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.MvcApplicationPartsAssemblyInfo.cs
+E:\Codigo\eStore\eStore\api.eVoucher\obj\Debug\netcoreapp3.1\api.eVoucher.MvcApplicationPartsAssemblyInfo.cache
