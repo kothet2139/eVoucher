@@ -41,6 +41,11 @@ namespace api.eVoucher
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IPurchaseHistoryRespository, PurchaseHistoryRespository>();
 
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["RedisCache:ConnectionString"];
+            });
+
             //services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             // For Identity  
